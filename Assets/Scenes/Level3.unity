@@ -435,7 +435,7 @@ PrefabInstance:
     - target: {fileID: 1424430271764875697, guid: 1a35342a332e7444db88a8f1f4b1f52f,
         type: 3}
       propertyPath: bounce
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7396274478149202801, guid: 1a35342a332e7444db88a8f1f4b1f52f,
         type: 3}
@@ -81836,14 +81836,14 @@ PolygonCollider2D:
       - {x: -11.167876, y: -5.366994}
       - {x: 30.305277, y: -5.390616}
       - {x: 30.351042, y: -13.35506}
-      - {x: 70.92918, y: -13.212579}
-      - {x: 70.92724, y: -7.4654684}
-      - {x: 73.009895, y: -6.8059645}
+      - {x: 77.80054, y: -13.327101}
+      - {x: 77.798164, y: -10.694488}
+      - {x: 77.81985, y: -6.748703}
       - {x: 77.31975, y: -6.612392}
-      - {x: 116.0229, y: -6.534753}
-      - {x: 116.00589, y: 1.7000034}
-      - {x: 170.21437, y: 1.6110833}
-      - {x: 170.255, y: 11.07603}
+      - {x: 125.077385, y: -6.6465364}
+      - {x: 125.06037, y: 1.5882196}
+      - {x: 176.02713, y: 1.6110833}
+      - {x: 176.06775, y: 11.299598}
       - {x: 215.6424, y: 11.157435}
       - {x: 215.66951, y: 38.950283}
 --- !u!1 &1282618209
@@ -81881,7 +81881,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 48.600006, y: -10}
+  m_AnchoredPosition: {x: 48.599976, y: -10}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1282618211
@@ -82604,7 +82604,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 35
+  m_Mass: 20
   m_LinearDrag: 0
   m_AngularDrag: 0.1
   m_GravityScale: 1
@@ -84133,7 +84133,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 11.399994, y: -10}
+  m_AnchoredPosition: {x: 11.400024, y: -10}
   m_SizeDelta: {x: 30.35, y: 30.351}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2018668671
