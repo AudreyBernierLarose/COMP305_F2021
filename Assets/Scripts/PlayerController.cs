@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded = false;
     private Animator anim;
     private bool isFacingRight = true;
-    private Vector3 startPos;
+    //private Vector3 startPos;
 
     //"Public" variables
     [SerializeField] private float speed = 10.0f;
@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
         rBody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
-        startPos = gameObject.transform.position;
+        //startPos = gameObject.transform.position;
     }
 
     //When working with physics, use FixedUpdate Loop
@@ -46,8 +46,8 @@ public class PlayerController : MonoBehaviour
         if ((isFacingRight && rBody.velocity.x < 0) || (!isFacingRight && rBody.velocity.x > 0))
             Flip();
 
-        if (transform.position.y < -20)
-            gameObject.transform.position = startPos;
+        //if (transform.position.y < -20)
+            //gameObject.transform.position = startPos;
 
         //Communicate with animator
         anim.SetFloat("xVelocity", Mathf.Abs(rBody.velocity.x));
