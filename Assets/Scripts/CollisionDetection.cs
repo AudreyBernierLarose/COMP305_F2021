@@ -8,11 +8,15 @@ public class CollisionDetection : MonoBehaviour
     private Rigidbody2D rBody;
 
     [SerializeField] private float bounce;
+    [SerializeField] private GameObject bouncingPlatform;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Bounce" && rBody.velocity.y < 0)
+        {
+            other.gameObject.GetComponent<Animator>().SetBool("isBouncing", true);
             rBody.AddForce(transform.up * bounce, ForceMode2D.Impulse);
+        }
 
         if (other.gameObject.tag == "End")
         {
@@ -21,6 +25,22 @@ public class CollisionDetection : MonoBehaviour
             rBody.constraints = RigidbodyConstraints2D.FreezeAll;
             StartCoroutine(WaitMenu());
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Bounce")
+        {
+            Debug.Log("Exit Collision bounce");
+            StartCoroutine(WaitAnim());
+            
+        }
+    }
+
+    IEnumerator WaitAnim()
+    {
+        yield return new WaitForSeconds(0.25f);
+        bouncingPlatform.gameObject.GetComponent<Animator>().SetBool("isBouncing", false);
     }
 
     IEnumerator WaitMenu()
