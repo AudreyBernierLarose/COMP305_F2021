@@ -58,7 +58,10 @@ public class LevelController : MonoBehaviour
         {
             //Go to the next level
             StartCoroutine(WaitSound());
-            SceneManager.LoadScene(0);
+            if (SceneManager.GetActiveScene().name == "Level1")
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            else
+                SceneManager.LoadScene(0);
         }
     }
 
